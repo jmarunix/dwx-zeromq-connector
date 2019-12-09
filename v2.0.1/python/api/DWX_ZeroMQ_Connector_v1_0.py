@@ -468,7 +468,7 @@ class DWX_ZeroMQ_Connector():
     "self._thread_data_output" is necesary a little delay after the execution
     by any of the sending commands, in my case
         (bot)localhost --> (Metatrader5)localhost
-            "sleep(0.022)"
+            "sleep(0.02)"
         """
         while self._ACTIVE:
             sleep(self._sleep_delay) # poll timeout is in ms, sleep() is s.
