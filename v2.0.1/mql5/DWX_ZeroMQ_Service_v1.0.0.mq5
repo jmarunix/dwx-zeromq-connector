@@ -1066,7 +1066,7 @@ void DWX_PositionClose_Ticket(int _ticket,string &zmq_ret)
 
    if(PositionSelectByTicket(_ticket))
      {
-      DWX_CloseAtMarket(-1,zmq_ret);
+      DWX_CloseAtMarket(_ticket,zmq_ret);//valor primer arg -1...no funciona
       zmq_ret+=", '_response': 'CLOSE_MARKET'";
       zmq_ret+=", '_response_value': 'SUCCESS'";
      }
